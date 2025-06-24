@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeFlash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">&#9889;</span>
+            <span class="logo-text">CodeFlash</span>
+        </div>
+        <div id="menu-icon" class="menu-icon" aria-label="Open menu" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <span class="logo-icon">&#9889;</span>
+            <span class="logo-text">CodeFlash</span>
+            <button id="close-sidebar" class="close-sidebar" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="about.html">Contact us</a></li>
+            
+        </ul>
+        <button id="custom-signin-btn" class="sidebar-signin-btn">Sign In</button>
+        <div id="clerk-auth" style="display:none;"></div>
+    </aside>
+
+    <main>
+        <section class="home-section" data-aos="fade-up">
+            <!-- 3D stars canvas background -->
+            <canvas id="stars-bg"></canvas>
+
+            <div class="home-left" data-aos="fade-right" data-aos-delay="100">
+                <h1>
+                    <span>Master Coding with</span><br>
+                    <span class="cf-blue">CodeFlash</span>
+                </h1>
+                <p>
+                    Learn HTML, CSS, and JavaScript through daily flashcards,<br>
+                    quizzes, and AI-powered assistance.
+                </p>
+                <a href="about.html" class="home-btn" data-aos="zoom-in" data-aos-delay="200">Read More</a>
+            </div>
+            <div class="home-right" data-aos="fade-left" data-aos-delay="200">
+                <div class="cf-logo-art">
+                    <span id="cf-logo-text" class="cf-logo-text">CODEFLASH</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Content Section: How CodeFlash Works & What You'll Learn -->
+    <section class="content-section" data-aos="fade-up">
+        <div class="cf-container">
+            <h2 class="cf-section-title" data-aos="fade-down">How CodeFlash Works</h2>
+            <div class="cf-features">
+                <div class="cf-feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cf-feature-icon cf-icon-flash"></div>
+                    <h3>Daily Flashcards</h3>
+                    <p>Unlock new flashcards daily and progress through topics at your own pace. Each card teaches a single concept with clear examples.</p>
+                </div>
+                <div class="cf-feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cf-feature-icon cf-icon-quiz"></div>
+                    <h3>Topic Quizzes</h3>
+                    <p>Test your knowledge with quizzes that unlock after completing a set of flashcards. Reinforce your learning with immediate feedback.</p>
+                </div>
+                <div class="cf-feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cf-feature-icon cf-icon-ai"></div>
+                    <h3>AI Assistant</h3>
+                    <p>Get help anytime with our AI coding assistant. Ask questions, receive explanations, and get guidance when you're stuck.</p>
+                </div>
+            </div>
+
+            <h2 class="cf-section-title" data-aos="fade-down" data-aos-delay="100">What You'll Learn</h2>
+            <div class="cf-learn-grid">
+                <div class="cf-learn-card cf-learn-web" data-aos="zoom-in-up" data-aos-delay="100">
+                    <h4>&lt;/&gt; Website Development</h4>
+                    <p>Dive into full website development from scratch. Combine HTML, CSS, JavaScript, and design principles to build complete web projects.</p>
+                    <ul>
+                        <li>Combines multiple technologies</li>
+                        <li>Builds real-world projects</li>
+                        <li>Improves job readiness</li>
+                    </ul>
+                </div>
+                <div class="cf-learn-card cf-learn-c" data-aos="zoom-in-up" data-aos-delay="200">
+                    <h4>&#x1F4BB; C Programming</h4>
+                    <p>Learn the basics of structured programming with C – the mother of modern languages. Understand memory, loops, arrays, and logic building.</p>
+                    <ul>
+                        <li>Sharpens programming logic</li>
+                        <li>Teaches memory management</li>
+                        <li>Used in system programming</li>
+                    </ul>
+                </div>
+                <div class="cf-learn-card cf-learn-cpp" data-aos="zoom-in-up" data-aos-delay="300">
+                    <h4>&#x1F4C8; C++ Programming</h4>
+                    <p>Master object-oriented programming with C++. Understand classes, objects, inheritance, polymorphism, and STL (Standard Template Library).</p>
+                    <ul>
+                        <li>Master object-oriented design</li>
+                        <li>Fast execution speed</li>
+                        <li>Widely used in development</li>
+                    </ul>
+                </div>
+                <div class="cf-learn-card cf-learn-python" data-aos="zoom-in-up" data-aos-delay="400">
+                    <h4>&#128013; Python <span class="cf-learn-note">(Suggested for future expansion)</span></h4>
+                    <p>Learn Python – the most beginner-friendly language used in data science, automation, and web development.</p>
+                    <ul>
+                        <li>Simple and readable syntax</li>
+                        <li>Great for rapid prototyping</li>
+                        <li>Popular in many fields</li>
+                    </ul>
+                </div>
+                <div class="cf-learn-card cf-learn-java" data-aos="zoom-in-up" data-aos-delay="500">
+                    <h4>&#9749; Java</h4>
+                    <p>Learn Java for app development, backend systems, and competitive programming. Object-oriented, scalable, and powerful.</p>
+                    <ul>
+                        <li>Cross-platform development power</li>
+                        <li>Strong in enterprise apps</li>
+                        <li>Teaches solid programming foundation</li>
+                    </ul>
+                </div>
+                <div class="cf-learn-card cf-learn-sql" data-aos="zoom-in-up" data-aos-delay="600">
+                    <h4>&#128202; SQL</h4>
+                    <p>SQL is a standard language for managing and querying relational databases. It's essential for handling structured data in web and software applications.</p>
+                    <ul>
+                        <li>Manages relational databases</li>
+                        <li>Powerful data querying language</li>
+                        <li>Essential for backend systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Content Section -->
+
+    <script
+      async
+      crossorigin="anonymous"
+      data-clerk-publishable-key="pk_test_c2F2ZWQtbW9sZS05OC5jbGVyay5hY2NvdW50cy5kZXYk"
+      src="https://saved-mole-98.clerk.accounts.dev/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
+      type="text/javascript"
+    ></script>
+    <script src="js/script.js"></script>
+    <script src="js/stars.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 900,
+        once: true
+      });
+    </script>
+
+    <footer class="cf-footer">
+        <div class="cf-footer-container">
+            <span class="cf-footer-logo">&#9889; CodeFlash</span>
+            <span class="cf-footer-text">&copy; 2025 CodeFlash. All rights reserved.</span>
+          <span class="cf-footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" id="footer-about-link">About</a>
+                <a href="about.html" id="footer-contact-link">Contact</a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>

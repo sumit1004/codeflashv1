@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | CodeFlash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+   (function(){
+      emailjs.init("xCbTuEx5MxXl6fTKu"); 
+   })();
+</script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">&#9889;</span>
+            <span class="logo-text">CodeFlash</span>
+        </div>
+        <div id="menu-icon" class="menu-icon" aria-label="Open menu" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <span class="logo-icon">&#9889;</span>
+            <span class="logo-text">CodeFlash</span>
+            <button id="close-sidebar" class="close-sidebar" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About us</a></li>
+            <li><a href="#contact">Contact us</a></li>
+        </ul>
+        <button id="custom-signin-btn" class="sidebar-signin-btn">Sign In</button>
+        <div id="clerk-auth" style="display:none;"></div>
+    </aside>
+
+    <main>
+        <section class="about-hero" data-aos="fade-down">
+            <div class="about-hero-content" data-aos="zoom-in" data-aos-delay="100">
+                <span class="about-hero-icon">&#9889;</span>
+                <h1>About <span class="cf-blue">CodeFlash</span></h1>
+                <p class="about-hero-tagline">
+                    Empowering you to master coding, one flashcard at a time.
+                </p>
+            </div>
+        </section>
+        <section class="about-main" data-aos="fade-up">
+            <div class="about-flex-container">
+                <div class="about-container" data-aos="fade-right" data-aos-delay="100">
+                    <h2 data-aos="fade-up" data-aos-delay="200">Our Mission</h2>
+                    <p data-aos="fade-up" data-aos-delay="250">
+                        CodeFlash is dedicated to making coding accessible, engaging, and effective for everyone. We believe learning to code should be fun, interactive, and tailored to your pace.
+                    </p>
+                    <h2 data-aos="fade-up" data-aos-delay="300">What We Offer</h2>
+                    <ul class="about-features">
+                        <li data-aos="fade-up" data-aos-delay="350">
+                            <strong>Daily Flashcards:</strong> Bite-sized lessons to build your knowledge step by step.
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="400">
+                            <strong>Quizzes:</strong> Reinforce your learning and track your progress.
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="450">
+                            <strong>AI Assistance:</strong> Get instant help and explanations whenever you're stuck.
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="500">
+                            <strong>Community Support:</strong> Learn together and grow together.
+                        </li>
+                    </ul>
+                    <h2 data-aos="fade-up" data-aos-delay="550">Our Story</h2>
+                    <p data-aos="fade-up" data-aos-delay="600">
+                        Founded by passionate educators and developers, CodeFlash was created to bridge the gap between theory and practice. Our team is committed to providing high-quality, up-to-date content and innovative tools to help you succeed in your coding journey.
+                    </p>
+                    <div class="about-team" data-aos="fade-up" data-aos-delay="650">
+                        <h3>Meet the Team</h3>
+                        <div class="about-team-members">
+                            <div class="about-team-member" data-aos="zoom-in" data-aos-delay="700">
+                                <img src="https://ui-avatars.com/api/?name=Sumit&background=007bff&color=fff" alt="Sumit">
+                                <span>Sumit<br><small>Founder & Developer</small></span>
+                            </div>
+                            <!-- Add more team members as needed -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Us Form Section placed after about-container -->
+                <section id="contact" class="about-contact" data-aos="fade-left" data-aos-delay="200">
+                    <h2>Contact Us</h2>
+                    <p>
+                        Have questions, feedback, or need support? Reach out to us using the form below.
+                    </p>
+                    <form class="about-contact-form" onsubmit="Sendmail(event)">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="cf-footer">
+        <div class="cf-footer-container">
+            <span class="cf-footer-logo">&#9889; CodeFlash</span>
+            <span class="cf-footer-text">&copy; 2025 CodeFlash. All rights reserved.</span>
+            <span class="cf-footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" id="footer-about-link">About</a>
+                <a href="about.html" id="footer-contact-link">Contact</a>
+            </span>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 900,
+        once: true
+      });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
